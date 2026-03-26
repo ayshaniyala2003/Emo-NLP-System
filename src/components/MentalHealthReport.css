@@ -1,0 +1,40 @@
+.mhr { overflow: hidden; }
+.mhr-banner {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid currentColor;
+  background: rgba(0,0,0,0.2);
+}
+.mhr-banner-left { display: flex; align-items: center; gap: 14px; }
+.mhr-icon { font-size: 2rem; }
+.mhr-risk { font-size: 1.1rem; font-weight: 800; }
+.mhr-score-line { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+.mhr-date { font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+.mhr-body { padding: 22px; display: flex; flex-direction: column; gap: 14px; }
+.mhr-section-title {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px;
+}
+.mhr-narrative {
+  font-size: 0.92rem; line-height: 1.75; color: var(--text-secondary);
+}
+
+.mhr-recs { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.mhr-rec-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;
+}
+.mhr-rec-bullet {
+  flex-shrink: 0; width: 22px; height: 22px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700; color: white; margin-top: 1px;
+}
+
+.mhr-disclaimer {
+  font-size: 0.74rem; color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 13px;
+  line-height: 1.5;
+}

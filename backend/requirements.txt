@@ -1,0 +1,30 @@
+# ── Core API ──────────────────────────────────────────────────────────────
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+httpx>=0.27.0
+pydantic>=2.6.0
+
+# ── PyTorch CPU-only (smaller, no CUDA) ───────────────────────────────────
+# Install separately: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+# DO NOT install torch from here directly to avoid CUDA bloat
+# torch and torchaudio must be installed first via the command above
+
+# ── HuggingFace Transformers (text emotion) ───────────────────────────────
+transformers>=4.40.0
+tokenizers>=0.19.0
+sentencepiece>=0.2.0
+
+# ── Face emotion (DeepFace — pure Python, no build required) ─────────────
+deepface>=0.0.93
+tf-keras>=2.16.0
+
+# ── Speech (Whisper + SpeechBrain for emotion) ────────────────────────────
+openai-whisper>=20231117
+speechbrain>=1.0.0
+
+# ── Audio / Image utilities ───────────────────────────────────────────────
+numpy>=1.26.0
+pillow>=10.2.0
+scipy>=1.12.0
+opencv-python-headless>=4.9.0.80

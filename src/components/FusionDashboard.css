@@ -1,0 +1,57 @@
+.fusion-dashboard { display: flex; flex-direction: column; gap: 20px; }
+.fd-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+.fd-header-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.fd-error {
+  background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25);
+  border-radius: var(--radius-sm); padding: 10px 14px; color: #fca5a5; font-size: 0.85rem;
+}
+
+/* Modality cards */
+.fd-modal-card {
+  padding: 18px; display: flex; flex-direction: column; gap: 8px;
+  transition: all var(--transition-normal);
+}
+.fd-modal-card.active { border-color: rgba(99,102,241,0.3); }
+.fd-card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.fd-card-title { font-weight: 700; font-size: 0.95rem; }
+.fd-card-score { display: flex; align-items: baseline; gap: 4px; }
+.fd-score-num { font-size: 2rem; font-weight: 800; color: var(--accent-primary); }
+.fd-score-label { font-size: 0.75rem; color: var(--text-muted); }
+.fd-card-dominant {
+  font-size: 0.88rem; text-transform: capitalize; font-weight: 600; color: var(--text-secondary);
+}
+.fd-card-conf { font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+.fd-card-empty {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 16px 8px; color: var(--text-muted); text-align: center;
+}
+.fd-card-empty span { font-size: 2rem; opacity: 0.3; }
+.fd-card-empty p { font-size: 0.75rem; line-height: 1.4; }
+
+/* Weight sliders */
+.fd-weights { padding: 18px 22px; }
+.fd-sliders { display: flex; flex-direction: column; gap: 12px; }
+.fd-slider-row { display: flex; align-items: center; gap: 14px; }
+.fd-slider-label { width: 60px; font-size: 0.85rem; font-weight: 500; text-transform: capitalize; }
+.fd-slider {
+  flex: 1; -webkit-appearance: none; height: 4px;
+  background: rgba(255,255,255,0.08); border-radius: 99px; outline: none;
+}
+.fd-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 16px; height: 16px;
+  border-radius: 50%; background: var(--accent-primary); cursor: pointer;
+  box-shadow: 0 0 8px rgba(99,102,241,0.5);
+}
+.fd-slider-val { width: 32px; text-align: right; font-size: 0.8rem; color: var(--text-secondary); }
+
+/* Viz row */
+.fd-results { display: flex; flex-direction: column; gap: 20px; }
+.fd-viz-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 700px) { .fd-viz-row { grid-template-columns: 1fr; } }
+.fd-viz-card { display: flex; flex-direction: column; align-items: center; }
+
+.fd-risk-badge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.fd-risk-pill {
+  padding: 6px 18px; border-radius: 99px;
+  font-weight: 700; font-size: 0.9rem; letter-spacing: 0.02em;
+}

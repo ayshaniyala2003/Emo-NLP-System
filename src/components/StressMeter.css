@@ -1,0 +1,16 @@
+.stress-meter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stress-meter svg {
+  overflow: visible;
+  filter: drop-shadow(0 0 0px transparent);
+}
+.stress-meter-footer {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+}
+.dominant-label { color: rgba(255,255,255,0.3); }
+.dominant-value { color: rgba(255,255,255,0.75); font-weight: 600; margin-left: 4px; }

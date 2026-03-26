@@ -1,0 +1,59 @@
+.face-analysis { display: flex; flex-direction: column; gap: 18px; }
+.fa-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; }
+.fa-header h3 { font-size: 1.05rem; font-weight: 700; }
+.fa-subtitle { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
+.fa-badges { display: flex; align-items: center; gap: 8px; }
+
+.live-badge {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 99px;
+  background: rgba(239,68,68,0.15);
+  border: 1px solid rgba(239,68,68,0.25);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--accent-red);
+}
+
+.fa-camera-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border-subtle);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-video {
+  width: 100%; display: block; border-radius: var(--radius-md);
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.fa-video.active { opacity: 1; }
+.fa-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; color: var(--text-muted);
+}
+.fa-placeholder-icon { font-size: 2.5rem; opacity: 0.4; }
+.fa-overlay {
+  position: absolute; bottom: 12px; left: 12px;
+  display: flex; gap: 12px; flex-wrap: wrap;
+  background: rgba(0,0,0,0.65);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  font-size: 0.8rem; backdrop-filter: blur(8px);
+}
+
+.fa-controls { display: flex; gap: 10px; flex-wrap: wrap; }
+.fa-error {
+  background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25);
+  border-radius: var(--radius-sm); padding: 10px 14px;
+  font-size: 0.85rem; color: #fca5a5;
+}
+
+.fa-results { display: flex; flex-direction: column; gap: 12px; }
+.fa-result-header { display: flex; justify-content: space-between; align-items: center; }
+.fa-dominant { font-size: 0.88rem; }
+.fa-confidence { font-size: 0.78rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
