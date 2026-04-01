@@ -82,9 +82,17 @@ async def analyze_face_endpoint(req: FaceRequest):
     """
     if not req.image_base64:
         raise HTTPException(status_code=400, detail="image_base64 is required")
+    
     try:
         result = analyze_face(req.image_base64)
-        return result
+
+        safe_result = {
+            key: (value.item() if hasattr(value, "item") else value)
+            for key, value in result.items()
+        }
+
+        return safe_result
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
